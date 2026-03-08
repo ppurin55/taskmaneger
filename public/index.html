@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Task Manager</title>
+
+<style>
+
+body{
+  font-family: Arial, sans-serif;
+  background:#f4f4f4;
+  margin:0;
+  padding:20px;
+}
+
+h1{
+  text-align:center;
+}
+
+#task-form{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+input{
+  padding:8px;
+  width:250px;
+}
+
+button{
+  padding:8px 12px;
+  cursor:pointer;
+}
+
+.board{
+  display:flex;
+  gap:20px;
+}
+
+.column{
+  flex:1;
+  background:white;
+  padding:10px;
+  border-radius:5px;
+}
+
+.column h2{
+  text-align:center;
+}
+
+.task{
+  background:#eee;
+  margin:5px;
+  padding:8px;
+  border-radius:4px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Task Manager</h1>
+
+<div id="task-form">
+<input type="text" id="task-input" placeholder="タスクを入力">
+<button onclick="createTask()">追加</button>
+</div>
+
+<div class="board">
+
+<div class="column">
+<h2>TODO</h2>
+<div id="todo"></div>
+</div>
+
+<div class="column">
+<h2>DOING</h2>
+<div id="doing"></div>
+</div>
+
+<div class="column">
+<h2>DONE</h2>
+<div id="done"></div>
+</div>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
